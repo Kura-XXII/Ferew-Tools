@@ -9,7 +9,6 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 1. **Steam** - Must be installed of course 
 2. **SteamTools** - You only need to open it and close it to inject the scrypt
 # 🧐 How to Use
----
 
 1. **Download** the .exe from Releases or Quick Download Link
 <br>
@@ -29,7 +28,9 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 ✅ App IDs:       "739630", "730"
 ✅ Steam URLs:    "https://store.steampowered.com/app/ 739630/"
 ```
-
+# 🖼️ App Picture
+<img width="597" height="726" alt="Capture d&#39;écran 2026-03-08 014828" src="https://github.com/user-attachments/assets/8eacb3f3-df9e-4f77-9c23-f0ba76acc5ec" />
+<img width="449" height="573" alt="Capture d&#39;écran 2026-03-08 014851" src="https://github.com/user-attachments/assets/dd5ca8ba-f546-4091-a527-cb0aa09435b1" />
 # 📜 License
 Ferew Tools License Agreement
 
