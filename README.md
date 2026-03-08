@@ -57,13 +57,13 @@ This software is provided for educational, research, and experimental purposes o
    This application is provided for educational and experimental purposes only.
    By using this software, you acknowledge that you are doing so entirely at your own risk.
 
-The author is not responsible for any misuse, damage, data loss, or other issues that may occur from the use of this software.
+   The author is not responsible for any misuse, damage, data loss, or other issues that may occur from the use of this software.
 
-This tool is provided "as is" without any guarantees or warranties. Users are fully responsible for how they choose to use this application and must ensure they comply with the terms of service of any platform they interact with.
+   This tool is provided "as is" without any guarantees or warranties. Users are fully responsible for how they choose to use this application and must ensure they    comply with the terms of service of any platform they interact with.
 
 7. Acceptance of Terms
-   By downloading, installing, or using this software, you acknowledge that you have read, understood, and agreed to all the terms listed in this license. If you do not agree with these terms, you must not use this software.
+   By downloading, installing, or using this software, you acknowledge that you have read, understood, and agreed to all the terms listed in this license. If you      do not agree with these terms, you must not use this software.
 
 
-Use this software at your own risk.
+   Use this software at your own risk.
 
