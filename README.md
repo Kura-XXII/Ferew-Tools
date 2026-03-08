@@ -7,7 +7,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 **KURAXXI.FIXES**
 # ❗ Requirement
 1. **Steam** - Must be installed of course 
-2. **SteamTools** - You only need to open it and close it to inject the scrypt
+2. **SteamTools** - SteamTools is required for the application to function properly.
 # 🧐 How to Download
 
 1. **Download** the .exe from Releases or Quick Download Link
