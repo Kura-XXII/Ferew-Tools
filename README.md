@@ -1,5 +1,6 @@
 # Ferew-Tools 🎮
-A Windows application that makes installing games easy and fast. Just type a game name or appid or steam url link, click install, and let the automation do the rest.
+A powerful Windows application built to make game installation simple and fast.
+Just enter a game name, AppID, or Steam URL, click **Install**, and let the automation take care of everything.
 # ⬇️ Quick Download Link
 Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe)
 # 🔑 App Password
