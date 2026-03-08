@@ -9,8 +9,11 @@ Download Link Here ┈┈➤
 2. **SteamTools** - You only need to open it and close it to inject the scrypt
 # 🤔 How to Use
 1.**Download** the .exe from Releases or Quick Download Link
+<br>
 2.**Run** it (allow admin permissions if asked)
+<br>
 3.**Enter** the password an Click Install
+<br>
 4.**Wait** for the process to complete
 # ❓ How You Can Search:
 
