@@ -1,0 +1,33 @@
+# --- Ferew Tools Specific ---
+cache/
+temp/
+settings.json
+*.zip
+*.lua
+*.manifest
+*.st
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# --- Distribution / Compilation (PyInstaller) ---
+build/
+dist/
+*.spec
+
+# --- Environment & Secrets ---
+.env
+.pytest_cache/
+
+# --- System Files ---
+.DS_Store
+Thumbs.db
+
+# --- IDEs/Editors ---
+.vscode/
+.idea/
