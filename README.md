@@ -32,8 +32,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 <img width="597" height="726" alt="Capture d&#39;écran 2026-03-08 014828" src="https://github.com/user-attachments/assets/8eacb3f3-df9e-4f77-9c23-f0ba76acc5ec" />
 <img width="449" height="573" alt="Capture d&#39;écran 2026-03-08 014851" src="https://github.com/user-attachments/assets/dd5ca8ba-f546-4091-a527-cb0aa09435b1" />
 
-# 📜 License
-Ferew Tools License Agreement
+# 📜 Ferew Tools License Agreement
 
 Copyright (c) 2026 KuraXXI
 
