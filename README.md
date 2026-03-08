@@ -8,7 +8,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 # ❗ Requirement
 1. **Steam** - Must be installed of course 
 2. **SteamTools** - You only need to open it and close it to inject the scrypt
-# 🧐 How to Use
+# 🧐 How to Download
 
 1. **Download** the .exe from Releases or Quick Download Link
 <br>
