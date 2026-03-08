@@ -26,7 +26,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 ```text
 ✅ Game Names:    "Phasmophobia", "Counter-Strike 2"
 ✅ App IDs:       "739630", "730"
-✅ Steam URLs:    "https://store.steampowered.com/app/ 739630/"
+✅ Steam URLs:    "https://store.steampowered.com/app/739630/"
 ```
 # 🖼️ App Picture
 <img width="597" height="726" alt="Capture d&#39;écran 2026-03-08 014828" src="https://github.com/user-attachments/assets/8eacb3f3-df9e-4f77-9c23-f0ba76acc5ec" />
