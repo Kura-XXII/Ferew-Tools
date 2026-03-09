@@ -1,0 +1,5 @@
+New update here 
+
+we fixed some issue
+
+https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe
