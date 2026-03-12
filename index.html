@@ -585,7 +585,7 @@
             .nav-links { display: none; }
         }
 
-        /* --- NOUVELLES ANIMATIONS AJOUTÉES ICI --- */
+        
         .animate-fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -788,7 +788,7 @@
     </section>
 
     <script>
-        // Fonctionnalité des onglets existante
+       
         function switchTab(tabId, buttonElement) {
             document.querySelectorAll('.feature-tab').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.feature-pane').forEach(pane => pane.classList.remove('active'));
@@ -797,13 +797,13 @@
             document.getElementById('pane-' + tabId).classList.add('active');
         }
 
-        // --- NOUVEAU SCRIPT POUR L'ANIMATION AU SCROLL ---
+       
         function revealElements() {
             var reveals = document.querySelectorAll(".reveal");
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // Déclenchement à 100px du bas de l'écran
+                var elementVisible = 100; 
                 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -811,11 +811,12 @@
             }
         }
         
-        // Écouteur d'événement pour le défilement
+       
         window.addEventListener("scroll", revealElements);
         
-        // Déclenchement initial au chargement pour les éléments déjà visibles
+        
         revealElements();
     </script>
 </body>
 </html>
+
