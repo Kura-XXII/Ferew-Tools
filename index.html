@@ -272,7 +272,7 @@
             gap: 1.5rem;
         }
 
-        /* --- CARDS ANIMATIONS (UPDATED) --- */
+        /* --- CARDS ANIMATIONS --- */
         .why-card {
             background: linear-gradient(180deg, #1f1f1f 0%, #0a0a0a 100%);
             border: 1px solid var(--border-color);
@@ -303,7 +303,6 @@
             z-index: 1;
         }
 
-        /* Reflet de lumière au survol */
         .why-card::before, .info-card::before {
             content: '';
             position: absolute;
@@ -614,7 +613,6 @@
             .nav-links { display: none; }
         }
 
-        /* --- NOUVELLES ANIMATIONS --- */
         .animate-fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -830,7 +828,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // Déclenchement à 100px du bas de l'écran
+                var elementVisible = 100;
                 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -842,4 +840,5 @@
         revealElements();
     </script>
 </body>
+
 </html>
