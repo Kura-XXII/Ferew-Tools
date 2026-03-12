@@ -1,7 +1,0 @@
-New update:
-
-We added "search & deleter" to delete your games
-
-We fixed some issue from api some time not working.
-
-https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe
