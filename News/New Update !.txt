@@ -1,0 +1,11 @@
+NEW UPDATE:
+
+We Added automatic update from settings you can enable if you want to download update quickly.
+
+We Added window showing update and update information if available.
+
+We Added read all botton from notification if you to lazy to read them all.
+
+ATTENTION: WE DIDN'T CHECK IF THERE NEW ISSUES OR LAG OR FREEZE SO PLEASE IF YOU FIND ANY PROBLEME, LET ME KNOW !
+
+https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe
