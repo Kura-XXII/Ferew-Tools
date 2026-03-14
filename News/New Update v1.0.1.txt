@@ -12,4 +12,4 @@ We Added read all botton from notification if you to lazy to read them all.
 
 ATTENTION: The installation was 12,2 mb to 162 mb due of cream installer.
 
-https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe
+https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewTools.rar
