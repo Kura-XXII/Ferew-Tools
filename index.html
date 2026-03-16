@@ -272,7 +272,7 @@
             gap: 1.5rem;
         }
 
-        /* --- CARDS ANIMATIONS --- */
+        /* --- CARDS ANIMATIONS (UPDATED) --- */
         .why-card {
             background: linear-gradient(180deg, #1f1f1f 0%, #0a0a0a 100%);
             border: 1px solid var(--border-color);
@@ -303,6 +303,7 @@
             z-index: 1;
         }
 
+        /* Reflet de lumière au survol */
         .why-card::before, .info-card::before {
             content: '';
             position: absolute;
@@ -613,6 +614,7 @@
             .nav-links { display: none; }
         }
 
+        /* --- NOUVELLES ANIMATIONS --- */
         .animate-fade-up {
             opacity: 0;
             transform: translateY(30px);
@@ -754,6 +756,24 @@
                     <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
                 </span>
             </button>
+            <button class="feature-tab" onclick="switchTab('fixes', this)">
+                Game fixes
+                <span class="feature-tab-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+            </button>
+            <button class="feature-tab" onclick="switchTab('achievements', this)">
+                Steam Achievements
+                <span class="feature-tab-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+            </button>
+            <button class="feature-tab" onclick="switchTab('dlc', this)">
+                DLC Unlocker
+                <span class="feature-tab-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+            </button>
         </div>
 
         <div class="features-content-area">
@@ -765,6 +785,23 @@
             <div id="pane-delete" class="feature-pane">
                 <h3>Search & Delete</h3>
                 <p>Delete .lua files related to owned games located in your stplug-in folder.</p>
+            </div>
+
+            <div id="pane-fixes" class="feature-pane">
+                <h3>Game fixes</h3>
+                <p>Automatic download integration of essential Bypass for games Needed.</p>
+            </div>
+
+            <div id="pane-achievements" class="feature-pane">
+                <h3>Steam Achievements</h3>
+                <p>Easily manage and unlock your Steam achievements directly from the software interface.</p> 
+                <p style="margin-top: 1.5rem;"><span style="color: #ff9800; font-weight: bold;">ATTENTION:</span> Do not unlock achievements For onlines games, there is a big risks of ban from the game and your steam account.</p>
+            </div>
+
+            <div id="pane-dlc" class="feature-pane">
+                <h3>DLC Unlocker</h3>
+                <p>Automatically discover and unlock available DLC for your supported games. Working on offline games and steam tools games only.</p>
+                <p style="margin-top: 1.5rem;"><span style="color: #ff9800; font-weight: bold;">ATTENTION:</span> Do not download DLC For onlines games, there is a big risks of ban from the game and your steam account.</p>
             </div>
         </div>
     </section>
@@ -828,7 +865,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100;
+                var elementVisible = 100; // Déclenchement à 100px du bas de l'écran
                 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -840,5 +877,4 @@
         revealElements();
     </script>
 </body>
-
 </html>
