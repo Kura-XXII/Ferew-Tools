@@ -29,9 +29,9 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 ✅ Steam URLs:    "https://store.steampowered.com/app/739630/"
 ```
 # 🖼️ App Picture
-<img width="602" height="727" alt="Capture d&#39;écran 2026-03-11 193552" src="https://github.com/user-attachments/assets/18bc732c-7b77-48e3-90fa-1394547aaf46" />
 
-<img width="452" height="627" alt="image" src="https://github.com/user-attachments/assets/39ccc7fb-048a-416c-9c84-0515c7da21c4" />
+
+
 
 # 📜 Ferew Tools License Agreement
 
