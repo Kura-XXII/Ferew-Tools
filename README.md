@@ -30,8 +30,9 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 ```
 # 🖼️ App Picture
 
+https://github.com/Kura-XXII/Ferew-Tools/blob/main/Pictures/App.png
 
-
+https://github.com/Kura-XXII/Ferew-Tools/blob/main/Pictures/AppSettings.png
 
 # 📜 Ferew Tools License Agreement
 
