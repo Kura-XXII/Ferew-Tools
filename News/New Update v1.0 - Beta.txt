@@ -7,7 +7,9 @@ We Fixed some issue in research that when typing game names and clicking on ente
 
 We Added online fix features.
 ATTENTION: Our app uses an unsteamed method to access online fix servers. While it works for many games, some may experience issues like C++ errors or non-functional multiplayer. We cannot provide support for these specific game errors. If you encounter them, we highly recommend downloading the fix directly from: 
+
 https://online-fix.me/
+
 
 Any update idea let me know on Discord or GitHub.
 
