@@ -6,7 +6,8 @@ We Changed the ui design of the app to a better one.
 We Fixed some issue in research that when typing game names and clicking on enter, it search for lua games, right now it ask to choose one of the options...
 
 We Added online fix features.
-ATTENTION: Our app uses an unsteamed method to access online fix servers. While it works for many games, some may experience issues like C++ errors or non-functional multiplayer. We cannot provide support for these specific game errors. If you encounter them, we highly recommend downloading the fix directly from: https://online-fix.me/
+ATTENTION: Our app uses an unsteamed method to access online fix servers. While it works for many games, some may experience issues like C++ errors or non-functional multiplayer. We cannot provide support for these specific game errors. If you encounter them, we highly recommend downloading the fix directly from: 
+https://online-fix.me/
 
 Any update idea let me know on Discord or GitHub.
 
