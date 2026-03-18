@@ -1,7 +1,7 @@
 NEW UPDATE:
 
 Now it's require to pay for a product key to access to our app.
-You have now 7days to update if you didn't in 7 days, the app will stop openning.
+You have now 7days to update if you didn't in 7 days, the app will stop openning...
 
 
 Any update idea let me know on Discord or GitHub.
