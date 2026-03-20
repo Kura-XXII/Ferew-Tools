@@ -5,6 +5,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 # 🚀 Ferew Tools — Features Overview
 **🆓 Free Features:**
 <br>
+<br>
 
 
 🔍 Search games by Name, App ID, or URL
@@ -36,6 +37,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 
 
 **💎 Premium Features:**
+<br>
 <br>
 
 
