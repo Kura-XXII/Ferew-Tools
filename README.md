@@ -34,6 +34,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 
 💾 Cache management system
 <br>
+<br>
 
 
 **💎 Premium Features:**
