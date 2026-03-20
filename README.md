@@ -2,7 +2,7 @@
 A powerful Windows application built to make game installation simple and fast.
 Just enter a game name, AppID, or Steam URL, click **Install**, and let the automation take care of everything.
 
-# 🚀 Ferew Tools — Features Overview
+# 🚀 Ferew Tools — Features
 **🆓 Free Features:**
 <br>
 <br>
