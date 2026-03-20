@@ -6,6 +6,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 **🆓 Free Features:**
 <br>
 
+
 🔍 Search games by Name, App ID, or URL
 <br>
 
@@ -37,10 +38,11 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 **💎 Premium Features:**
 <br>
 
+
 ⚡ Search & Install faster and optimized
 <br>
 
-Bypass installation system (exclusive)
+🔓 Bypass installation system (exclusive)
 <br>
 
 🌐 Online-Fix installer for multiplayer games
