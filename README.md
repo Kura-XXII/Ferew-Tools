@@ -5,8 +5,6 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 # 🚀 Ferew Tools — Features
 **🆓 Free Features:**
 <br>
-<br>
-
 ```text
 🔍 Search games by Name, App ID, or URL
 📥 Basic Install system
@@ -20,33 +18,16 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 ```
 **💎 Premium Features:**
 <br>
-<br>
-
-
+```text
 ⚡ Search & Install faster and optimized
-<br>
-
 🔓 Bypass installation system (exclusive)
-<br>
-
 🌐 Online-Fix installer for multiplayer games
-<br>
-
 🚀 Priority servers (better speed & reliability)
-<br>
-
 🎯 Advanced automation tools
-<br>
-
 🔄 Auto-detection & smart install
-<br>
-
 🛠️ Future premium updates included
-<br>
-
 🧠 Improved search accuracy & suggestions
-<br>
-
+```
 
 # ⬇️ Quick Download Link
 Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe)
