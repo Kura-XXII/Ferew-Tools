@@ -7,7 +7,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 <br>
 <br>
 
-
+```text
 🔍 Search games by Name, App ID, or URL
 <br>
 
@@ -36,7 +36,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 <br>
 <br>
 
-
+```
 **💎 Premium Features:**
 <br>
 <br>
