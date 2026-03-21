@@ -9,33 +9,14 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 
 ```text
 🔍 Search games by Name, App ID, or URL
-<br>
-
 📥 Basic Install system
-<br>
-
 🗑️ Delete installed Lua games
-<br>
-
 🔄 Restart Steam automatically
-<br>
-
 🏆 Launch Steam Achievements (SAM)
-<br>
-
 📦 DLC Unlocker (basic usage)
-<br>
-
 ⚙️ Settings (theme, language, update)
-<br>
-
 📊 Activity logs & notifications
-<br>
-
 💾 Cache management system
-<br>
-<br>
-
 ```
 **💎 Premium Features:**
 <br>
