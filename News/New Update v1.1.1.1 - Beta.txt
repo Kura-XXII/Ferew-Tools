@@ -1,0 +1,36 @@
+NEW UPDATE:
+
+
+We fixed some lag issue on product keys.
+
+We Added some new languages: English - French - Spanish - Polish - Arabic - German
+
+🚀 Ferew Tools — Features:
+
+🆓 Free Features:
+ Search games by Name, App ID, or URL
+ Basic Install system
+ Delete installed Lua games
+ Restart Steam automatically
+ Launch Steam Achievements (SAM)
+ DLC Unlocker (basic usage)
+ Settings (theme, language, cache)
+ Activity logs & notifications
+ Cache management system
+
+💎 Premium Features:
+ Search & Install faster and optimized
+ Bypass installation system (exclusive)
+ Online-Fix installer for multiplayer games
+ Priority servers (better speed & reliability)
+ Advanced automation tools
+ Auto-detection & smart install
+ Future premium updates included
+ Improved search accuracy & suggestions
+
+
+Any update idea let me know on Discord or GitHub.
+
+Please this is a pre-release Update (Beta) if there any issue in this update, report it from GitHub or dm me on discord.
+
+Thanks for reading...
