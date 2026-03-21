@@ -5,6 +5,8 @@ We fixed some lag issue on product keys.
 
 We Added some new languages: English - French - Spanish - Polish - Arabic - German
 
+We Fixed the restart app when changing language
+
 🚀 Ferew Tools — Features:
 
 🆓 Free Features:
