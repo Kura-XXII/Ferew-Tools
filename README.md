@@ -60,11 +60,13 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 **Dark themes:**
 
-<img width="1102" height="752" alt="image" src="https://github.com/user-attachments/assets/e3131e8c-5271-48be-a8b4-d5bdc12d8444" />
+<img width="1102" height="747" alt="Capture d&#39;écran 2026-04-04 000016" src="https://github.com/user-attachments/assets/1a473a00-fd9d-4ffa-8d91-3adedcece294" />
+
 
 **White themes:**
 
-<img width="1102" height="752" alt="image" src="https://github.com/user-attachments/assets/7e7f7c3b-9965-4f8b-aef6-4b8f7ca14cd4" />
+<img width="1102" height="747" alt="Capture d&#39;écran 2026-04-04 000030" src="https://github.com/user-attachments/assets/c4673c13-2b2a-44ac-9310-b4137fa23c67" />
+
 
 
 # 📜 Ferew Tools License Agreement
