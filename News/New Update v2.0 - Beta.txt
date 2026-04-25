@@ -1,0 +1,23 @@
+NEW UPDATE:
+
+
+We fixed some lag issue on settings some time not showing up.
+
+We fixed the Connections error on steam so you can finaly download games again.
+
+We Added an app names "Steam Tools Patcher" Who help to patch steam Tools if Steam Tools servers are offline.
+
+We Added "Steam Fix" who fixes people who facing issue with injected dll of steam tools on their steam like buy logo etc...
+
+We Added Steam Tools injections so no need steam Tools anymore, the app only verify if you have the steam Tools scrypt injected or not
+
+
+
+Pomotion for the premium features who is now for 5$ 
+ 
+
+Any update idea let me know on Discord or GitHub.
+
+Please this is a pre-release Update (Beta) if there any issue in this update, report it from GitHub or dm me on discord.
+
+Thanks for reading...
