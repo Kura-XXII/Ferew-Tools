@@ -20,7 +20,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 2. **SteamTools** - SteamTools is required for the application to function properly.
 # 🧐 How to Download
 
-1. **Download** the .exe from Releases or Quick Download Link
+1. **Download** the .exe from Releases or Website or Quick Download Link
 <br>
 
 2. **Run** it (allow admin permissions if asked)
