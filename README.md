@@ -47,7 +47,8 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 **White themes:**
 
-<img width="380" height="580" alt="image" src="https://github.com/user-attachments/assets/cfc07f2a-c3f6-468d-8053-9ed8345e61e0" />
+<img width="380" height="580" alt="image" src="https://github.com/user-attachments/assets/e5d9bea9-d224-4d41-81c6-fb773a24a2a6" />
+
 
 
 
