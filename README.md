@@ -25,8 +25,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 2. **Run** it (allow admin permissions if asked)
 <br>
-
-3. **Enter** the password and Click Install
+3. **Click** Install
 <br>
 
 4. **Wait** for the process to complete
@@ -42,12 +41,14 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 **Dark themes:**
 
-<img width="1102" height="747" alt="Capture d&#39;écran 2026-04-04 000016" src="https://github.com/user-attachments/assets/1a473a00-fd9d-4ffa-8d91-3adedcece294" />
+<img width="380" height="580" alt="image" src="https://github.com/user-attachments/assets/49b83fb4-8212-4e60-9be3-b877cf3bf255" />
+
 
 
 **White themes:**
 
-<img width="1102" height="747" alt="Capture d&#39;écran 2026-04-04 000030" src="https://github.com/user-attachments/assets/c4673c13-2b2a-44ac-9310-b4137fa23c67" />
+<img width="380" height="580" alt="image" src="https://github.com/user-attachments/assets/cfc07f2a-c3f6-468d-8053-9ed8345e61e0" />
+
 
 
 
