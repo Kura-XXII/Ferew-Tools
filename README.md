@@ -3,30 +3,13 @@ A powerful Windows application built to make game installation simple and fast.
 Just enter a game name, AppID, or Steam URL, click **Install**, and let the automation take care of everything.
 
 # 🚀 Ferew Tools — Features
-**🆓 Free Features:**
+**🆓 Features:**
 <br>
 ```text
 🔍 Search games by Name, App ID, or URL
 📥 Basic Install system
-🗑️ Delete installed Lua games
 🔄 Restart Steam automatically
-🏆 Launch Steam Achievements (SAM)
-📦 DLC Unlocker (basic usage)
 ⚙️ Settings (theme, language, update)
-📊 Activity logs & notifications
-💾 Cache management system
-```
-**💎 Premium Features:**
-<br>
-```text
-⚡ Search & Install faster and optimized
-🔓 Bypass installation system (exclusive)
-🌐 Online-Fix installer for multiplayer games
-🚀 Priority servers (better speed & reliability)
-🎯 Advanced automation tools
-🔄 Auto-detection & smart install
-🛠️ Future premium updates included
-🧠 Improved search accuracy & suggestions
 ```
 
 # ⬇️ Quick Download Link
