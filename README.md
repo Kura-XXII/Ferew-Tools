@@ -14,8 +14,7 @@ Just enter a game name, AppID, or Steam URL, click **Install**, and let the auto
 
 # ⬇️ Quick Download Link
 Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe)
-# 🔑 App Password
-**KURAXXI.FIXES**
+
 # ❗ Requirement
 1. **Steam** - Must be installed of course 
 2. **SteamTools** - SteamTools is required for the application to function properly.
