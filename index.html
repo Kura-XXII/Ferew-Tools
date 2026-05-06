@@ -24,7 +24,11 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', sans-serif;
+        }
+
+        html {
             scroll-behavior: smooth;
+            scroll-padding-top: 130px; /* Permet de centrer les sections sous la barre de navigation */
         }
 
         body {
@@ -245,7 +249,6 @@
             text-align: center;
             margin-bottom: 3rem;
             padding: 0 2rem;
-            scroll-margin-top: 100px; /* Offset for sticky nav */
         }
 
         .section-header h2 {
@@ -272,7 +275,7 @@
             gap: 1.5rem;
         }
 
-        /* --- CARDS ANIMATIONS (UPDATED) --- */
+        /* --- CARDS ANIMATIONS --- */
         .why-card {
             background: linear-gradient(180deg, #1f1f1f 0%, #0a0a0a 100%);
             border: 1px solid var(--border-color);
@@ -386,9 +389,12 @@
 
         /* --- App Showcase --- */
         .app-showcase {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto 100px;
             padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
         }
 
         .app-image-container {
@@ -397,12 +403,8 @@
             overflow: hidden;
             box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.05);
             background: #111;
-        }
-
-        .app-image-container img {
+            max-width: 380px;
             width: 100%;
-            display: block;
-            height: auto;
         }
 
         /* --- Features --- */
@@ -585,7 +587,6 @@
         .cta-section {
             padding: 0 2rem 120px;
             position: relative;
-            scroll-margin-top: 50px;
         }
 
         .cta-card {
@@ -649,6 +650,10 @@
             .hero h1 { font-size: 3rem; }
             .cta-card h2 { font-size: 2.5rem; }
             .nav-links { display: none; }
+            .app-showcase {
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         /* --- NOUVELLES ANIMATIONS --- */
@@ -695,7 +700,8 @@
             </div>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#why">Features</a>
+                <a href="#why">Reason</a>
+                <a href="#features">Features</a>
                 <a href="#cta">Download</a>
             </div>
             <div class="social-links">
@@ -711,7 +717,7 @@
 
     <section class="hero" id="home">
         <div class="hero-badge animate-fade-up">
-            <span class="badge-dot"></span> v1.0 is now available
+            <span class="badge-dot"></span> vBeta is now available
         </div>
         
         <h1 class="animate-fade-up delay-1">Ferew Tools</h1>
@@ -752,7 +758,7 @@
                 <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Secure & Safe</h3>
-            <p>Built with nuitka and modern security standards. Your data stays yours.</p>
+            <p>Modern Electron-based architecture. Secure, transparent, and built to respect your privacy.</p>
         </div>
 
         <div class="why-card reveal" style="transition-delay: 0.2s;">
@@ -760,7 +766,7 @@
                 <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
             </div>
             <h3>Modern UI</h3>
-            <p>A simple design, Tkinter interface powered by Python.</p>
+            <p>A sleek, modern interface powered by Electron. Designed for performance with a focus on a clean user experience.</p>
         </div>
     </section>
 
@@ -769,7 +775,24 @@
     </div>
     <section class="app-showcase reveal">
         <div class="app-image-container">
-            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/refs/heads/main/Pictures/App.png" alt="Ferew Tools Application">
+            <video 
+                src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/refs/heads/main/Pictures/App.mp4" 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                style="width: 100%; display: block; height: auto;">
+            </video>
+        </div>
+        <div class="app-image-container" style="transition-delay: 0.1s;">
+            <video 
+                src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/App_2.mp4" 
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                style="width: 100%; display: block; height: auto;">
+            </video>
         </div>
     </section>
 
@@ -787,75 +810,12 @@
                     <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
                 </span>
             </button>
-            <button class="feature-tab" onclick="switchTab('delete', this)">
-                Search & Delete
-                <span class="feature-tab-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </span>
-            </button>
-            <button class="feature-tab" onclick="switchTab('fixes', this)">
-                Search & Bypass
-                <span class="feature-tab-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </span>
-            </button>
-            <button class="feature-tab" onclick="switchTab('onlinefix', this)">
-                Search & OnlineFix
-                <span class="feature-tab-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </span>
-            </button>
-            <button class="feature-tab" onclick="switchTab('achievements', this)">
-                Steam Achievements
-                <span class="feature-tab-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </span>
-            </button>
-            <button class="feature-tab" onclick="switchTab('dlc', this)">
-                DLC Unlocker
-                <span class="feature-tab-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </span>
-            </button>
         </div>
 
         <div class="features-content-area">
             <div id="pane-install" class="feature-pane active">
                 <h3>Search & Install</h3>
                 <p>Search for the required games that you want to install, with just a single click. Fast and is perfectly configured.</p>
-            </div>
-            
-            <div id="pane-delete" class="feature-pane">
-                <h3>Search & Delete</h3>
-                <p>Delete .lua files related to owned games located in your stplug-in folder.</p>
-            </div>
-
-            <div id="pane-fixes" class="feature-pane">
-                <h3>Search & Bypass</h3>
-                <p>Automatic download integration of essential Bypass for games Needed.</p>
-            </div>
-
-            <div id="pane-onlinefix" class="feature-pane">
-                <h3>Search & OnlineFix</h3>
-                <p>Easily find and install online fixes for your games to enable multiplayer features and play with your friends.</p>
-                <p style="margin-top: 1.5rem;"><span style="color: #ff9800; font-weight: bold;">ATTENTION:</span> Our app uses an unsteamed method to access online fix servers. While it works for many games, some may experience issues like C++ errors or non-functional multiplayer. We cannot provide support for these specific game errors. If you encounter them, we highly recommend downloading the fix directly from:<br>
-                <a href="https://online-fix.me" target="_blank" class="large-warning-link">
-                    <img src="https://raw.githubusercontent.com/Kura-XXII/steam-tools-downloader/main/oflogo.gif" alt="Online-Fix.me Logo">
-                    Online-Fix.me
-                </a>
-                </p>
-            </div>
-
-            <div id="pane-achievements" class="feature-pane">
-                <h3>Steam Achievements</h3>
-                <p>Easily manage and unlock your Steam achievements directly from the software interface.</p> 
-                <p style="margin-top: 1.5rem;"><span style="color: #ff9800; font-weight: bold;">ATTENTION:</span> Do not unlock achievements For onlines games, there is a big risks of ban from the game and your steam account.</p>
-            </div>
-
-            <div id="pane-dlc" class="feature-pane">
-                <h3>DLC Unlocker</h3>
-                <p>Automatically discover and unlock available DLC for your supported games. Working on offline games and steam tools games only.</p>
-                <p style="margin-top: 1.5rem;"><span style="color: #ff9800; font-weight: bold;">ATTENTION:</span> Do not download DLC For onlines games, there is a big risks of ban from the game and your steam account.</p>
             </div>
         </div>
     </section>
@@ -878,7 +838,7 @@
                 <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Multilingual</h3>
-            <p>Interface available in English only at this moment...</p>
+            <p>Fully localized experience: available in English, Français, Español, Polski, العربية, Nederlands, and Русский...</p>
         </div>
 
         <div class="info-card reveal" style="transition-delay: 0.2s;">
@@ -901,7 +861,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
                 Download for Windows
             </a>
-            <span class="cta-version">v1.0.1 / Windows 10/11 - 64-bit</span>
+            <span class="cta-version">vBeta / Windows 10/11 - 64-bit</span>
         </div>
     </section>
 
