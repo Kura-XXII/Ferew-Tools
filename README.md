@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/77affe9e-afb4-43e6-8a9c-61ab754a7048
-
 # Ferew-Tools 🎮
 A powerful Windows application built to make game installation simple and fast.
 Just enter a game name, AppID, or Steam URL, click **Install**, and let the automation take care of everything.
@@ -47,11 +43,12 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
   <tr>
     <td valign="top" align="center">
       <b>Dark Theme</b><br />
-      <video src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/App.mp4" width="380" controls muted autoplay loop></video>
+      <video src="https://github.com/user-attachments/assets/77affe9e-afb4-43e6-8a9c-61ab754a7048
+" width="380" controls muted autoplay loop></video>
     </td>
     <td valign="top" align="center">
       <b>White Theme</b><br />
-      <video src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/App_2.mp4" width="380" controls muted autoplay loop></video>
+      <video src="https://github.com/user-attachments/assets/fa28a2d0-2942-473f-8723-3c741616ff89" width="380" controls muted autoplay loop></video>
     </td>
   </tr>
 </table>
