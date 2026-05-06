@@ -41,13 +41,13 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 <table>
   <tr>
-    <td align="center">
+    <td valign="top" align="center">
       <b>Dark Theme</b><br />
-      <video src="https://github.com/Kura-XXII/Ferew-Tools/raw/main/Pictures/App.mp4" width="380" autoplay muted loop></video>
+      <img src="https://github.com/user-attachments/assets/49b83fb4-8212-4e60-9be3-b877cf3bf255" width="380" />
     </td>
-    <td align="center">
+    <td valign="top" align="center">
       <b>White Theme</b><br />
-      <video src="https://github.com/Kura-XXII/Ferew-Tools/raw/main/Pictures/App_2.mp4" width="380" autoplay muted loop></video>
+      <img src="https://github.com/user-attachments/assets/e5d9bea9-d224-4d41-81c6-fb773a24a2a6" width="380" />
     </td>
   </tr>
 </table>
