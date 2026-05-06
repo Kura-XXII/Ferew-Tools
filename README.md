@@ -37,18 +37,20 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 ✅ App IDs:       "739630", "730"
 ✅ Steam URLs:    "https://store.steampowered.com/app/739630/"
 ```
-# 🖼️ App Picture
+# 🖼️ App Pictures
 
-**Dark themes:**
-
-<img width="380" height="580" alt="image" src="https://github.com/user-attachments/assets/49b83fb4-8212-4e60-9be3-b877cf3bf255" />
-
-
-
-**White themes:**
-
-<img width="380" height="580" alt="image" src="https://github.com/user-attachments/assets/e5d9bea9-d224-4d41-81c6-fb773a24a2a6" />
-
+<table>
+  <tr>
+    <td valign="top" align="center">
+      <b>Dark Theme</b><br />
+      <img src="https://github.com/user-attachments/assets/49b83fb4-8212-4e60-9be3-b877cf3bf255" width="380" />
+    </td>
+    <td valign="top" align="center">
+      <b>White Theme</b><br />
+      <img src="https://github.com/user-attachments/assets/e5d9bea9-d224-4d41-81c6-fb773a24a2a6" width="380" />
+    </td>
+  </tr>
+</table>
 
 
 
