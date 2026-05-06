@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/77affe9e-afb4-43e6-8a9c-61ab754a7048
+
 # Ferew-Tools 🎮
 A powerful Windows application built to make game installation simple and fast.
 Just enter a game name, AppID, or Steam URL, click **Install**, and let the automation take care of everything.
