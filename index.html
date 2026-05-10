@@ -28,7 +28,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 130px; /* Permet de centrer les sections sous la barre de navigation */
+            scroll-padding-top: 130px;
         }
 
         body {
@@ -134,7 +134,6 @@
 
         /* --- Hero Section --- */
         .hero {
-            /* Full height + centering */
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -182,7 +181,6 @@
             box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
         }
 
-        /* Gigantic Title to match the photo */
         .hero h1 {
             font-size: 6rem;
             font-weight: 800;
@@ -219,7 +217,6 @@
             transition: all 0.2s ease;
         }
 
-        /* Style like the white download button in the photo */
         .btn-main {
             background: #ffffff;
             color: #000000;
@@ -231,7 +228,6 @@
             background: #e4e4e7;
         }
 
-        /* Dark pill buttons for Source/Discord */
         .btn-secondary {
             background: rgba(255, 255, 255, 0.02);
             color: #ffffff;
@@ -275,13 +271,12 @@
             gap: 1.5rem;
         }
 
-        /* --- CARDS ANIMATIONS --- */
+        /* --- CARDS ANIMATIONS (FIXED BUG) --- */
         .why-card {
             background: linear-gradient(180deg, #1f1f1f 0%, #0a0a0a 100%);
             border: 1px solid var(--border-color);
             padding: 2.5rem 2rem;
             border-radius: 16px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-align: left;
             display: flex;
             flex-direction: column;
@@ -296,7 +291,6 @@
             border: 1px solid var(--border-color);
             padding: 2.5rem 2rem;
             border-radius: 16px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -306,7 +300,6 @@
             z-index: 1;
         }
 
-        /* Reflet de lumière au survol */
         .why-card::before, .info-card::before {
             content: '';
             position: absolute;
@@ -316,7 +309,6 @@
             height: 100%;
             background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
             transform: skewX(-20deg);
-            transition: all 0.6s ease;
             z-index: -1;
         }
 
@@ -328,6 +320,7 @@
 
         .why-card:hover::before, .info-card:hover::before {
             left: 200%;
+            transition: left 0.6s ease;
         }
 
         .why-card h3, .info-card h3 {
@@ -360,7 +353,7 @@
             justify-content: center;
             margin-bottom: 1.5rem;
             border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: background 0.4s ease, border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .info-icon-wrapper svg {
@@ -405,6 +398,13 @@
             background: #111;
             max-width: 380px;
             width: 100%;
+        }
+
+        .app-image-container img {
+            width: 100%;
+            display: block;
+            height: auto;
+            object-fit: cover;
         }
 
         /* --- Features --- */
@@ -541,43 +541,6 @@
             line-height: 1.7;
         }
 
-        /* --- Warning link styling --- */
-        .warning-link {
-            color: #ffffff;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            transition: color 0.2s ease;
-        }
-        
-        .warning-link:hover {
-            color: #ff9800;
-        }
-
-        /* --- Custom styling for large link --- */
-        .large-warning-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-top: 2rem;
-            text-decoration: none;
-            color: #ffffff;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .large-warning-link:hover {
-            transform: translateY(-5px);
-            color: #ff9800;
-        }
-
-        .large-warning-link img {
-            max-width: 200px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-        }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -632,9 +595,36 @@
             font-size: 1.1rem;
         }
 
+        /* --- Custom Download Group --- */
+        .download-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .download-row {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-both {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-both:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
         .cta-version {
             display: block;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             font-family: monospace;
             color: #666;
             font-size: 0.85rem;
@@ -653,6 +643,10 @@
             .app-showcase {
                 flex-direction: column;
                 align-items: center;
+            }
+            .download-row {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
 
@@ -681,13 +675,20 @@
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            /* On ne fait plus transition: all ici, juste opacity et transform pour éviter de casser le background des cartes */
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
         
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Solution: Spécifier explicitement les transitions pour les cartes afin de combiner proprement reveal et hover */
+        .why-card.reveal, .info-card.reveal {
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
     </style>
 </head>
 <body>
@@ -720,13 +721,13 @@
             <span class="badge-dot"></span> vBeta is now available
         </div>
         
-        <h1 class="animate-fade-up delay-1">Ferew Tools</h1>
-        <p class="animate-fade-up delay-2">The ultimate tool to streamline your experience. Powerful, fast, and completely free.</p>
+        <h1 class="animate-fade-up delay-1">Ferew</h1>
+        <p class="animate-fade-up delay-2">The ultimate tools to streamline your experience. Powerful, fast, and completely free.</p>
         
         <div class="hero-buttons animate-fade-up delay-3">
             <a href="#cta" class="btn-main">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                Download Now
+                Download Options
             </a>
             <a href="https://github.com/Kura-XXII/Ferew-Tools" class="btn-secondary" target="_blank">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -740,7 +741,7 @@
     </section>
 
     <div class="section-header reveal" id="why">
-        <h2>Why Ferew Tools?</h2>
+        <h2>Why Ferew ?</h2>
         <p>Everything you need to manage your collection, nothing you don't.</p>
     </div>
     
@@ -775,24 +776,10 @@
     </div>
     <section class="app-showcase reveal">
         <div class="app-image-container">
-            <video 
-                src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/refs/heads/main/Pictures/App.mp4" 
-                autoplay 
-                loop 
-                muted 
-                playsinline 
-                style="width: 100%; display: block; height: auto;">
-            </video>
+            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewTools.png" alt="Ferew Tools Preview">
         </div>
         <div class="app-image-container" style="transition-delay: 0.1s;">
-            <video 
-                src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/App_2.mp4" 
-                autoplay 
-                loop 
-                muted 
-                playsinline 
-                style="width: 100%; display: block; height: auto;">
-            </video>
+            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewManager.png" alt="Ferew Manager Preview">
         </div>
     </section>
 
@@ -805,7 +792,13 @@
     <section class="features-section reveal">
         <div class="features-sidebar">
             <button class="feature-tab active" onclick="switchTab('install', this)">
-                Search & Install
+                Ferew Tools
+                <span class="feature-tab-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+            </button>
+            <button class="feature-tab" onclick="switchTab('manager', this)">
+                Ferew Manager
                 <span class="feature-tab-icon">
                     <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
                 </span>
@@ -814,8 +807,12 @@
 
         <div class="features-content-area">
             <div id="pane-install" class="feature-pane active">
-                <h3>Search & Install</h3>
-                <p>Search for the required games that you want to install, with just a single click. Fast and is perfectly configured.</p>
+                <h3>Ferew Tools</h3>
+                <p>Search for the required games that you want to install in your steam library, with just a single click. Fast and is perfectly configured.</p>
+            </div>
+            <div id="pane-manager" class="feature-pane">
+                <h3>Ferew Manager</h3>
+                <p>Search for the required games that you want to delete in your steam library, with just a single click. Fast and is perfectly configured.</p>
             </div>
         </div>
     </section>
@@ -857,10 +854,24 @@
             </div>
             <h2>Ready to start your journey?</h2>
             <p>Join thousands of gamers managing their library the smart way. 100% Free</p>
-            <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe" class="btn-main">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                Download for Windows
-            </a>
+            
+            <div class="download-group">
+                <div class="download-row">
+                    <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsBeta.exe" class="btn-main">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        Ferew Tools
+                    </a>
+                    <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Manager-release/FerewManager.exe" class="btn-main">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        Ferew Manager
+                    </a>
+                </div>
+                <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew's-App/Ferews-App.zip" class="btn-secondary btn-both">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    Download Both (ZIP)
+                </a>
+            </div>
+
             <span class="cta-version">vBeta / Windows 10/11 - 64-bit</span>
         </div>
     </section>
@@ -879,7 +890,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // Déclenchement à 100px du bas de l'écran
+                var elementVisible = 100;
                 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
