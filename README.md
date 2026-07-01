@@ -1,6 +1,6 @@
-# Ferew-Tools 🎮
-A powerful Windows application built to make game installation simple and fast.
-Just enter a game name, AppID, or Steam URL, click **Install**, and let the automation take care of everything.
+# Ferew-Manager 🎮
+A powerful Windows application built to simplify SteamTools.
+Just by Clicking Disable or remove games from your library, apply fixes like Online-Fix or bypasses, and let the automation handle the rest.
 
 # 🚀 Ferew Tools — Features
 **🆓 Features:**
