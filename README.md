@@ -2,22 +2,24 @@
 A powerful Windows application built to simplify SteamTools.
 Just by Clicking Disable or remove games from your library, apply fixes like Online-Fix or bypasses, and let the automation handle the rest.
 
-# 🚀 Ferew Tools — Features
+# 🚀 Ferew Manager — Features
 **🆓 Features:**
 <br>
 ```text
-🔍 Search games by Name, App ID, or URL
-📥 Basic Install system
-🔄 Restart Steam automatically
-⚙️ Settings (theme, language, update)
+🔍 Search games by Name, App ID
+🧾 Show all information of the game, video, pictures...
+📥 One-click Game fix installation. It auto-detects your game folder so you can skip the bullshit and get straight to playing
+❌ Disable/Enable or delete Game
+🔄 Restart Steam
+⚙️ Settings (theme, language, features)
 ```
 
 # ⬇️ Quick Download Link
-Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsSetup.exe)
+Download Link Here ┈┈➤ [Ferew-Manager.exe](
 
 # ❗ Requirement
 1. **Steam** - Must be installed of course 
-2. **SteamTools** - SteamTools is required for the application to function properly.
+2. **SteamTools** - SteamTools is required for the application to function properly or just the dll scrypt will be enough.
 # 🧐 How to Download
 
 1. **Download** the .exe from Releases or Website or Quick Download Link
@@ -30,12 +32,14 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 4. **Wait** for the process to complete
 
-# ❓ How Can You Search games:
+# ❓ How Can You Download games fixes:
 **Here An Exemple:**
 ```text
-✅ Game Names:    "Phasmophobia", "Counter-Strike 2"
-✅ App IDs:       "739630", "730"
-✅ Steam URLs:    "https://store.steampowered.com/app/739630/"
+Select the game that you downloaded
+click on it
+Select the fix that you want (Online-fix or bypass)
+click on it
+wait for the app search for the fix if invable
 ```
 # 🎥 App Previews
 
@@ -43,7 +47,7 @@ Download Link Here ┈┈➤ [FerewToolsSetup.exe](https://github.com/Kura-XXII/
 
 
 
-# 📜 Ferew Tools License Agreement
+# 📜 Ferew Manager License Agreement
 
 Copyright (c) 2026 KuraXXI
 
