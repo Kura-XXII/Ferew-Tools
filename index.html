@@ -9,13 +9,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
         :root {
-            --bg-color: #0d0d0d;
-            --nav-bg: rgba(13, 13, 13, 0.7);
+            --bg-color: #0a0a0a;
+            --nav-bg: rgba(10, 10, 10, 0.7);
             --text-main: #ffffff;
             --text-muted: #a1a1aa;
             --glow-color: rgba(255, 255, 255, 0.15);
             --border-color: #333333;
-            --card-bg: #111111;
+            --card-bg: #151515;
             --card-hover: rgba(255, 255, 255, 0.08);
         }
 
@@ -36,6 +36,90 @@
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
+            position: relative;
+        }
+
+        /* --- Ambient Aurora Background --- */
+        .bg-aurora {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .bg-aurora span {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(110px);
+            opacity: 0.35;
+            will-change: transform;
+        }
+
+        .bg-aurora span:nth-child(1) {
+            width: 620px;
+            height: 620px;
+            top: -180px;
+            left: -120px;
+            background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 70%);
+            animation: aurora-drift-1 22s ease-in-out infinite;
+        }
+
+        .bg-aurora span:nth-child(2) {
+            width: 520px;
+            height: 520px;
+            top: 20%;
+            right: -160px;
+            background: radial-gradient(circle, rgba(160,160,160,0.14) 0%, transparent 70%);
+            animation: aurora-drift-2 26s ease-in-out infinite;
+        }
+
+        .bg-aurora span:nth-child(3) {
+            width: 700px;
+            height: 700px;
+            bottom: -260px;
+            left: 30%;
+            background: radial-gradient(circle, rgba(200,200,200,0.08) 0%, transparent 70%);
+            animation: aurora-drift-3 30s ease-in-out infinite;
+        }
+
+        @keyframes aurora-drift-1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(80px, 60px) scale(1.15); }
+        }
+
+        @keyframes aurora-drift-2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-70px, 40px) scale(1.1); }
+        }
+
+        @keyframes aurora-drift-3 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, -50px) scale(1.08); }
+        }
+
+        /* Subtle noise/grid overlay for texture */
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+        }
+
+        /* --- Floating Gray Particles --- */
+        #particle-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
         }
 
         /* --- Custom Text Selection --- */
@@ -100,15 +184,44 @@
         }
 
         .nav-links a {
+            position: relative;
+            display: inline-block;
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 600;
-            transition: color 0.3s;
+            padding: 6px 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            isolation: isolate;
+            transition: color 0.3s, text-shadow 0.3s;
         }
 
         .nav-links a:hover {
             color: var(--text-main);
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.55);
+        }
+
+        .nav-links a.nav-active-glow {
+            color: var(--text-main);
+            text-shadow: 0 0 18px rgba(255, 255, 255, 0.9), 0 0 36px rgba(255, 255, 255, 0.5);
+        }
+
+        .nav-ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            pointer-events: none;
+            z-index: -1;
+            animation: nav-ripple-anim 0.55s ease-out forwards;
+        }
+
+        @keyframes nav-ripple-anim {
+            to {
+                transform: translate(-50%, -50%) scale(5);
+                opacity: 0;
+            }
         }
 
         .social-links {
@@ -220,24 +333,27 @@
         .btn-main {
             background: #ffffff;
             color: #000000;
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
         .btn-main:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-            background: #e4e4e7;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.55), 0 12px 32px rgba(255, 255, 255, 0.15);
+            background: #f4f4f5;
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.03);
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.06);
         }
 
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(255, 255, 255, 0.3);
         }
 
         /* --- Section Headers --- */
@@ -382,7 +498,7 @@
 
         /* --- App Showcase --- */
         .app-showcase {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto 100px;
             padding: 0 2rem;
             display: flex;
@@ -391,12 +507,12 @@
         }
 
         .app-image-container {
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
             overflow: hidden;
-            box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 60px -10px rgba(255, 255, 255, 0.08);
             background: #111;
-            max-width: 380px;
+            max-width: 950px;
             width: 100%;
         }
 
@@ -404,7 +520,14 @@
             width: 100%;
             display: block;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-select: none;
+            -webkit-user-select: none;
+            pointer-events: auto;
         }
 
         /* --- Features --- */
@@ -614,12 +737,19 @@
             background: rgba(255, 255, 255, 0.05);
             color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.06);
         }
 
         .btn-both:hover {
             background: rgba(255, 255, 255, 0.15);
             border-color: rgba(255, 255, 255, 0.4);
             transform: translateY(-2px);
+            box-shadow: 0 0 28px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-card .btn-main {
+            padding: 18px 40px;
+            font-size: 1.15rem;
         }
 
         .cta-version {
@@ -692,6 +822,14 @@
     </style>
 </head>
 <body>
+
+    <div class="bg-aurora">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="bg-grid"></div>
+    <canvas id="particle-canvas"></canvas>
 
     <header>
         <nav>
@@ -772,14 +910,11 @@
     </section>
 
     <div class="section-header reveal">
-        <h2>Apps Previews</h2>
+        <h2>App Preview</h2>
     </div>
     <section class="app-showcase reveal">
         <div class="app-image-container">
-            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewTools.png" alt="Ferew Tools Preview">
-        </div>
-        <div class="app-image-container" style="transition-delay: 0.1s;">
-            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewManager.png" alt="Ferew Manager Preview">
+            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewManager.png" alt="Ferew Manager Preview" draggable="false">
         </div>
     </section>
 
@@ -791,13 +926,7 @@
 
     <section class="features-section reveal">
         <div class="features-sidebar">
-            <button class="feature-tab active" onclick="switchTab('install', this)">
-                Ferew Tools
-                <span class="feature-tab-icon">
-                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </span>
-            </button>
-            <button class="feature-tab" onclick="switchTab('manager', this)">
+            <button class="feature-tab active" onclick="switchTab('manager', this)">
                 Ferew Manager
                 <span class="feature-tab-icon">
                     <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
@@ -806,11 +935,7 @@
         </div>
 
         <div class="features-content-area">
-            <div id="pane-install" class="feature-pane active">
-                <h3>Ferew Tools</h3>
-                <p>Search for the required games that you want to install in your steam library, with just a single click. Fast and is perfectly configured.</p>
-            </div>
-            <div id="pane-manager" class="feature-pane">
+            <div id="pane-manager" class="feature-pane active">
                 <h3>Ferew Manager</h3>
                 <p>Search for the required games that you want to delete in your steam library, with just a single click. Fast and is perfectly configured.</p>
             </div>
@@ -857,19 +982,11 @@
             
             <div class="download-group">
                 <div class="download-row">
-                    <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Tools-releases/FerewToolsBeta.exe" class="btn-main">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                        Ferew Tools
-                    </a>
                     <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew-Manager-release/FerewManager.exe" class="btn-main">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
                         Ferew Manager
                     </a>
                 </div>
-                <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/Ferew's-App/Ferews-App.zip" class="btn-secondary btn-both">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                    Download Both (ZIP)
-                </a>
             </div>
 
             <span class="cta-version"> Windows 10/11 - 64-bit</span>
@@ -900,6 +1017,100 @@
         
         window.addEventListener("scroll", revealElements);
         revealElements();
+
+        /* --- Particle Background --- */
+        (function () {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            let width, height;
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            function createParticles() {
+                const count = Math.min(90, Math.floor((width * height) / 18000));
+                particles = Array.from({ length: count }, () => ({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 1.8 + 0.6,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
+                    o: Math.random() * 0.35 + 0.12
+                }));
+            }
+
+            function step() {
+                ctx.clearRect(0, 0, width, height);
+                for (const p of particles) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                    if (p.y < 0) p.y = height;
+                    if (p.y > height) p.y = 0;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.shadowBlur = 12;
+                    ctx.shadowColor = `rgba(220, 220, 220, ${p.o})`;
+                    ctx.fillStyle = `rgba(210, 210, 210, ${p.o})`;
+                    ctx.fill();
+                }
+                requestAnimationFrame(step);
+            }
+
+            resize();
+            createParticles();
+            step();
+
+            window.addEventListener('resize', () => {
+                resize();
+                createParticles();
+            });
+        })();
+
+        /* --- Nav Links Click Glow Effect + Smooth Scroll --- */
+        document.querySelectorAll('.nav-links a, .logo, a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href || !href.startsWith('#')) return;
+
+                const target = document.querySelector(href);
+                if (!target) return;
+
+                e.preventDefault();
+
+                const headerOffset = 100;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const rect = this.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                ripple.className = 'nav-ripple';
+                const size = Math.max(rect.width, rect.height) * 1.2;
+                ripple.style.width = size + 'px';
+                ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left) + 'px';
+                ripple.style.top = (e.clientY - rect.top) + 'px';
+                this.appendChild(ripple);
+
+                this.classList.add('nav-active-glow');
+                setTimeout(() => ripple.remove(), 600);
+                setTimeout(() => this.classList.remove('nav-active-glow'), 500);
+            });
+        });
     </script>
 </body>
 </html>
