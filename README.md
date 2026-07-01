@@ -40,7 +40,7 @@ click on it
 Select the fix that you want (Online-fix or bypass)
 click on it
 wait for the app search for the fix if invable
-And done you can open the game :)
+And done you can open the game
 ```
 # 🎥 App Previews
 
