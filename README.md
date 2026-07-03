@@ -15,7 +15,7 @@ Just by Clicking Disable or remove games from your library, apply fixes like Onl
 ```
 
 # ⬇️ Quick Download Link
-Download Link Here ┈┈➤ [Ferew-Manager.exe](
+Download Link Here ┈┈➤ [Ferew-Manager-Setup.exe](https://github.com/Kura-XXII/Ferew-Tools/releases/download/v1.0.0/Ferew-Manager-Setup-1.0.0.exe)
 
 # ❗ Requirement
 1. **Steam** - Must be installed of course 
