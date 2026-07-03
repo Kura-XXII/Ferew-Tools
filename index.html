@@ -37,6 +37,10 @@
             overflow-x: hidden;
             line-height: 1.6;
             position: relative;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         /* --- Ambient Aurora Background --- */
@@ -642,10 +646,27 @@
             border-radius: 24px;
             padding: 3.5rem;
             display: none;
-            height: 100%;
-            min-height: 350px;
+            height: 430px;
+            overflow-y: auto;
             animation: fadeIn 0.4s ease forwards;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-pane::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .feature-pane::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .feature-pane::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+        }
+
+        .feature-pane::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .feature-pane.active {
@@ -919,15 +940,27 @@
     </section>
 
     <div class="distill-style-header reveal" id="features">
-        <h2>Ferew</h2>
+        <h2>Ferew Manager</h2>
         <div class="header-line"></div>
         <p>The Ultimate Software for your Steam Library</p>
     </div>
 
     <section class="features-section reveal">
         <div class="features-sidebar">
-            <button class="feature-tab active" onclick="switchTab('manager', this)">
-                Ferew Manager
+            <button class="feature-tab active" onclick="switchTab('features', this)">
+                Features
+                <span class="feature-tab-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+            </button>
+            <button class="feature-tab" onclick="switchTab('onlinefix', this)">
+                Online-Fix
+                <span class="feature-tab-icon">
+                    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </span>
+            </button>
+            <button class="feature-tab" onclick="switchTab('bypass', this)">
+                By-Pass
                 <span class="feature-tab-icon">
                     <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
                 </span>
@@ -935,9 +968,23 @@
         </div>
 
         <div class="features-content-area">
-            <div id="pane-manager" class="feature-pane active">
-                <h3>Ferew Manager</h3>
-                <p>Search for the required games that you want to delete in your steam library, with just a single click. Fast and is perfectly configured.</p>
+            <!-- PANE 1: FEATURES (GAME HUB, MEDIA & ADVANCED SETTINGS COMBO) -->
+            <div id="pane-features" class="feature-pane active">
+                <h3>Features</h3>
+                <p>Explore deep metadata insights for your entire gaming library. Instantly check real-time active player counts directly on your game dashboard, review game categories, and browse high-resolution screenshot carousels with native fullscreen options. Stream official game trailers flawlessly using an integrated high-performance HLS (.m3u8) media streaming player.</p>
+                <p>Tailor your workspace application through a comprehensive settings panel. Customize independent card pagination layout sliders for both Windowed and Fullscreen modes, or toggle the experimental 'No Limit' layout grid. Maximize system optimization by toggling screenshots/videos off to dramatically lower RAM usage, and fine-tune media behavior with trailer auto-play toggles and precise audio volume percentage controls.</p>
+            </div>
+
+            <!-- PANE 2: ONLINE-FIX -->
+            <div id="pane-onlinefix" class="feature-pane">
+                <h3>Online-Fix</h3>
+                <p>Deploy multiplayer patches instantly with standalone folder injection. When a supported game is installed, a single click directly injects network configuration modifications into your local files. This safely detours official server authorization checks, letting you seamlessly connect and join multiplayer sessions through secure network-test loops on Steam or Epic Games.</p>
+            </div>
+
+            <!-- PANE 3: BY-PASS -->
+            <div id="pane-bypass" class="feature-pane">
+                <h3>By-Pass</h3>
+                <p>Overcome strict DRM requirements with direct standalone security bypass tools. This module works by injecting local emulators and crack frameworks straight into your installed game files. It functions as an offline pass, authenticating game ownership locally so that title packages boot smoothly without needing communication with external authentication servers.</p>
             </div>
         </div>
     </section>
@@ -993,7 +1040,28 @@
         </div>
     </section>
 
+    <footer style="text-align: center; padding: 2.5rem 1rem; color: var(--text-muted); font-size: 0.85rem; background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-top: 1px solid rgba(255,255,255,0.05);">
+        <p>© 2026 Ferew. All rights reserved.</p>
+        <p style="margin-top: 0.4rem;">Made by KuraXXI</p>
+    </footer>
+
     <script>
+        /* --- Désactivation de la copie et de la sélection de texte --- */
+        document.addEventListener('copy', function (e) { e.preventDefault(); });
+        document.addEventListener('cut', function (e) { e.preventDefault(); });
+        document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function (e) { e.preventDefault(); });
+        document.addEventListener('dragstart', function (e) { e.preventDefault(); });
+        document.addEventListener('keydown', function (e) {
+            const key = e.key ? e.key.toLowerCase() : '';
+            if (e.ctrlKey && (key === 'c' || key === 'x' || key === 'a' || key === 'u')) {
+                e.preventDefault();
+            }
+            if (key === 'f12') {
+                e.preventDefault();
+            }
+        });
+
         function switchTab(tabId, buttonElement) {
             document.querySelectorAll('.feature-tab').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.feature-pane').forEach(pane => pane.classList.remove('active'));
