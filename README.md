@@ -44,7 +44,8 @@ And done you can open the game
 ```
 # 🎥 App Previews
 
-<img width="1220" height="810" alt="image" src="https://github.com/user-attachments/assets/ab32cbe0-2ebf-494e-b17c-40cf09478cee" />
+<img width="1260" height="810" alt="FerewManager" src="https://github.com/user-attachments/assets/3fd24957-d7e2-4d83-a46c-51c0d7065308" />
+
 
 
 
