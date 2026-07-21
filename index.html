@@ -518,6 +518,8 @@
             background: #111;
             max-width: 950px;
             width: 100%;
+            animation: floatBounce 4s ease-in-out infinite;
+            will-change: transform;
         }
 
         .app-image-container img {
@@ -532,7 +534,6 @@
             user-select: none;
             -webkit-user-select: none;
             pointer-events: auto;
-            animation: floatBounce 4s ease-in-out infinite;
         }
 
         @keyframes floatBounce {
