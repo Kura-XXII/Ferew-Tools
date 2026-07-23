@@ -750,6 +750,227 @@
             font-size: 1.1rem;
         }
 
+        /* --- Download Modal --- */
+        #download-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 5, 5, 0.6);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 9999;
+            transition: opacity 0.35s ease;
+        }
+
+        #download-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #download-modal {
+            position: relative;
+            width: 400px;
+            max-width: 90vw;
+            padding: 48px 40px 40px;
+            border-radius: 26px;
+            background: linear-gradient(180deg, rgba(24,24,24,0.95), rgba(12,12,12,0.95));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 30px 70px rgba(0,0,0,0.7), 0 0 0px rgba(255,255,255,0);
+            text-align: center;
+            transform: scale(0.85) translateY(10px);
+            opacity: 0;
+            transition: transform 0.45s cubic-bezier(.16,1,.3,1), opacity 0.4s ease, box-shadow 0.6s ease;
+            overflow: hidden;
+        }
+
+        #download-overlay.show #download-modal {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 30px 70px rgba(0,0,0,0.7), 0 0 55px rgba(255,255,255,0.18), 0 0 110px rgba(120,170,255,0.12);
+        }
+
+        .modal-state {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .modal-state.active {
+            display: flex;
+            animation: modal-state-in 0.5s cubic-bezier(.16,1,.3,1);
+        }
+
+        @keyframes modal-state-in {
+            from { opacity: 0; transform: translateY(8px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Loading spinner */
+        .modal-spinner {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+            animation: modal-spin 0.85s linear infinite;
+        }
+
+        @keyframes modal-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .modal-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .modal-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Success check */
+        .modal-check-wrap {
+            width: 74px;
+            height: 74px;
+            margin-bottom: 18px;
+            border-radius: 50%;
+            background: rgba(74, 222, 128, 0.12);
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .modal-check-wrap::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid rgba(74, 222, 128, 0.55);
+            animation: modal-ring-burst 0.9s ease-out;
+        }
+
+        @keyframes modal-ring-burst {
+            0% { transform: scale(0.6); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        .modal-check-wrap svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .modal-check-wrap svg path {
+            stroke: #4ade80;
+            stroke-dasharray: 30;
+            stroke-dashoffset: 30;
+            animation: modal-check-draw 0.5s ease-out 0.15s forwards;
+        }
+
+        @keyframes modal-check-draw {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .modal-progress-track {
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.08);
+            margin-top: 22px;
+            overflow: hidden;
+        }
+
+        .modal-progress-fill {
+            height: 100%;
+            width: 0%;
+            border-radius: 4px;
+            background: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 0 0 24px rgba(255, 255, 255, 0.35);
+        }
+
+        .modal-state.active .modal-progress-fill {
+            animation: modal-progress-fill 2s cubic-bezier(.4,0,.2,1) forwards;
+        }
+
+        @keyframes modal-progress-fill {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+
+        .modal-cancel-btn {
+            margin-top: 22px;
+            padding: 10px 30px;
+            border-radius: 999px;
+            border: none;
+            background: #ffffff;
+            color: #000000;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .modal-cancel-btn:hover {
+            transform: translateY(-2px);
+            background: #f4f4f5;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.55), 0 12px 32px rgba(255, 255, 255, 0.15);
+        }
+
+        .modal-check-wrap--error {
+            background: rgba(248, 81, 73, 0.12);
+            box-shadow: 0 0 30px rgba(248, 81, 73, 0.35);
+        }
+
+        .modal-check-wrap--error::before {
+            border-color: rgba(248, 81, 73, 0.55);
+        }
+
+        .modal-check-wrap--error svg path {
+            stroke: #f85149;
+        }
+
+        .modal-btn-row {
+            display: flex;
+            gap: 14px;
+            margin-top: 22px;
+        }
+
+        .modal-btn-row .modal-cancel-btn,
+        .modal-btn-row .modal-retry-btn {
+            margin-top: 0;
+        }
+
+        .modal-retry-btn {
+            padding: 10px 30px;
+            border-radius: 999px;
+            border: none;
+            background: #ffffff;
+            color: #000000;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 18px rgba(255, 255, 255, 0.25), 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .modal-retry-btn:hover {
+            transform: translateY(-2px);
+            background: #f4f4f5;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.55), 0 12px 32px rgba(255, 255, 255, 0.15);
+        }
+
         /* --- Custom Download Group --- */
         .download-group {
             display: flex;
@@ -887,7 +1108,7 @@
 
     <section class="hero" id="home">
         <div class="hero-badge animate-fade-up">
-            <span class="badge-dot"></span> Ferew Manager is now available
+            <span class="badge-dot"></span> Ferew is now available
         </div>
         
         <h1 class="animate-fade-up delay-1">Ferew</h1>
@@ -896,7 +1117,7 @@
         <div class="hero-buttons animate-fade-up delay-3">
             <a href="#cta" class="btn-main">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                Download Options
+                Download
             </a>
             <a href="https://github.com/Kura-XXII/Ferew-Tools" class="btn-secondary" target="_blank">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
@@ -940,7 +1161,7 @@
     </section>
 
     <div class="distill-style-header reveal" id="features">
-        <h2>Ferew Manager</h2>
+        <h2>Ferew</h2>
         <div class="header-line"></div>
         <p>The Ultimate Software for your Steam Library</p>
     </div>
@@ -994,12 +1215,12 @@
     </div>
     <section class="app-showcase reveal">
         <div class="app-image-container">
-            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewManager.png" alt="Ferew Manager Preview" draggable="false">
+            <img src="https://raw.githubusercontent.com/Kura-XXII/Ferew-Tools/main/Pictures/FerewManager.png" alt="Ferew Preview" draggable="false">
         </div>
     </section>
 
     <div class="section-header reveal" id="why">
-        <h2>Why Ferew Manager</h2>
+        <h2>Why Ferew</h2>
         <p>Everything you need to manage your collection, nothing you don't.</p>
     </div>
     
@@ -1039,9 +1260,9 @@
             
             <div class="download-group">
                 <div class="download-row">
-                    <a href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/v1.0.6/Ferew-Manager-Setup-1.0.6.exe" class="btn-main">
+                    <a href="javascript:void(0)" data-href="https://github.com/Kura-XXII/Ferew-Tools/releases/download/v1.0.6/Ferew-Manager-Setup-1.0.6.exe" class="btn-main" id="main-download-btn">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                        Ferew Manager
+                        Download
                     </a>
                 </div>
             </div>
@@ -1054,6 +1275,40 @@
         <p>© 2026 Ferew. All rights reserved.</p>
         <p style="margin-top: 0.4rem;">Made by KuraXXI</p>
     </footer>
+
+    <div id="download-overlay">
+        <div id="download-modal">
+            <div class="modal-state" id="modal-state-loading">
+                <div class="modal-spinner"></div>
+                <span class="modal-title">Preparing your download...</span>
+                <span class="modal-sub">Just a moment</span>
+                <div class="modal-progress-track">
+                    <div class="modal-progress-fill"></div>
+                </div>
+                <button class="modal-cancel-btn" id="download-modal-cancel">Cancel</button>
+            </div>
+
+            <div class="modal-state" id="modal-state-success">
+                <div class="modal-check-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <span class="modal-title">Download started!</span>
+                <span class="modal-sub">Ferew is on its way to your downloads</span>
+            </div>
+
+            <div class="modal-state" id="modal-state-error">
+                <div class="modal-check-wrap modal-check-wrap--error">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </div>
+                <span class="modal-title">Download error</span>
+                <span class="modal-sub">The installer isn't available right now</span>
+                <div class="modal-btn-row">
+                    <button class="modal-cancel-btn" id="download-modal-cancel-error">Cancel</button>
+                    <button class="modal-retry-btn" id="download-modal-retry">Retry</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         /* --- Désactivation de la copie et de la sélection de texte --- */
@@ -1071,6 +1326,121 @@
                 e.preventDefault();
             }
         });
+
+        /* --- Download Modal Flow --- */
+        (function () {
+            const btn = document.getElementById('main-download-btn');
+            const overlay = document.getElementById('download-overlay');
+            const cancelBtn = document.getElementById('download-modal-cancel');
+            const cancelErrorBtn = document.getElementById('download-modal-cancel-error');
+            const retryBtn = document.getElementById('download-modal-retry');
+            const loadingState = document.getElementById('modal-state-loading');
+            const successState = document.getElementById('modal-state-success');
+            const errorState = document.getElementById('modal-state-error');
+            if (!btn || !overlay) return;
+
+            const downloadUrl = btn.getAttribute('data-href');
+            let prepareTimeout;
+            let autoCloseTimeout;
+            let activeRequestToken = 0;
+
+            function showState(state) {
+                loadingState.classList.remove('active');
+                successState.classList.remove('active');
+                errorState.classList.remove('active');
+                state.classList.add('active');
+            }
+
+            function closeModal() {
+                clearTimeout(prepareTimeout);
+                clearTimeout(autoCloseTimeout);
+                activeRequestToken++; // invalide toute vérification encore en cours
+                overlay.classList.remove('show');
+            }
+
+            // Extrait owner/repo/tag/fichier d'un lien GitHub Releases
+            function parseGithubReleaseUrl(url) {
+                const m = url.match(/^https:\/\/github\.com\/([^\/]+)\/([^\/]+)\/releases\/download\/([^\/]+)\/([^\/]+)$/);
+                if (!m) return null;
+                return { owner: m[1], repo: m[2], tag: m[3], file: decodeURIComponent(m[4]) };
+            }
+
+            // Vérifie via l'API GitHub (qui autorise le CORS, contrairement au lien
+            // de téléchargement direct) que le fichier existe vraiment dans la release.
+            // On ne contacte jamais l'URL de téléchargement elle-même pour ce test :
+            // si on le faisait et que le fichier n'existait pas, le navigateur
+            // afficherait la page d'erreur 404 de GitHub à la place du site.
+            function checkInstallerExists(url) {
+                const parsed = parseGithubReleaseUrl(url);
+                if (!parsed) return Promise.resolve(false);
+
+                const apiUrl = 'https://api.github.com/repos/' + parsed.owner + '/' + parsed.repo +
+                    '/releases/tags/' + encodeURIComponent(parsed.tag);
+
+                return fetch(apiUrl, { headers: { 'Accept': 'application/vnd.github+json' } })
+                    .then(function (response) {
+                        if (!response.ok) return false;
+                        return response.json().then(function (data) {
+                            return Array.isArray(data.assets) &&
+                                data.assets.some(function (a) { return a.name === parsed.file; });
+                        });
+                    })
+                    .catch(function () { return false; });
+            }
+
+            function startDownload() {
+                showState(loadingState);
+                overlay.classList.add('show');
+
+                const requestToken = ++activeRequestToken;
+
+                prepareTimeout = setTimeout(function () {
+                    checkInstallerExists(downloadUrl).then(function (exists) {
+                        // Si la modale a été fermée entre-temps (Cancel), on ignore le résultat
+                        if (requestToken !== activeRequestToken) return;
+
+                        if (exists) {
+                            triggerFileDownload();
+                        } else {
+                            showState(errorState);
+                        }
+                    });
+                }, 2000);
+            }
+
+            function triggerFileDownload() {
+                try {
+                    const link = document.createElement('a');
+                    link.href = downloadUrl;
+                    link.setAttribute('download', '');
+                    document.body.appendChild(link);
+                    link.click();
+                    link.remove();
+
+                    showState(successState);
+                    autoCloseTimeout = setTimeout(closeModal, 2600);
+                } catch (err) {
+                    showState(errorState);
+                    // Pas de fermeture automatique en cas d'erreur : l'utilisateur choisit
+                    // lui-même de réessayer ("Retry") ou d'annuler ("Cancel").
+                }
+            }
+
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                startDownload();
+            });
+
+            // Le bouton Cancel stoppe réellement la demande d'installation :
+            // il annule le timeout en cours, donc le fichier n'est jamais déclenché
+            // si l'utilisateur annule pendant la préparation.
+            cancelBtn.addEventListener('click', closeModal);
+            cancelErrorBtn.addEventListener('click', closeModal);
+            retryBtn.addEventListener('click', startDownload);
+
+            // Un clic en dehors de la fenêtre ne l'annule plus (comportement demandé) :
+            // seule la fermeture explicite via "Cancel" est possible.
+        })();
 
         function switchTab(tabId, buttonElement) {
             document.querySelectorAll('.feature-tab').forEach(btn => btn.classList.remove('active'));
